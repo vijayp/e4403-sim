@@ -1,5 +1,6 @@
 import constants
 import income
+import random
 import state
 
 
@@ -58,7 +59,8 @@ class Rules(object):
       market_share = ss_market_share - new_diff
 
     result.last_days_market_share = market_share
-    sales = market_share * constants.MARKET_SIZE
+    market_size = random.normalvariate(constants.MARKET_SIZE, constants.MARKET_STDDEV)
+    sales = market_share * market_size
 
     # Buy PP&E
     if strat_obj.PPAndE() > result.ppande:
