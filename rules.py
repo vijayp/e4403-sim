@@ -70,8 +70,8 @@ class Rules(object):
 
     if sales > (result.ppande / 30.0):
       result.messages.append(
-        'On day %d, wanted to make %d, but capacity was %d' %
-        (day_num, sales, result.ppande / 30.0)
+        'On day %d, wanted to make %d, but capacity was %d (up to %d)' %
+        (day_num, sales, result.ppande / 30.0, sales * 30.0)
         )
       sales = (result.ppande / 30.0)
 

@@ -60,7 +60,7 @@ class State(object):
         min_cash_amount = amount
         min_cash_day = day
 
-    return '[min_cash=%d (day=%d), max_sales=%d]' % (
+    return '[min_cash=%d (day=%d), max_sales=%d]\n' % (
       min_cash_amount, min_cash_day,
       self.max_sales_per_month) + ('\n'.join(self.messages))
 
